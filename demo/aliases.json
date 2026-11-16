@@ -1,0 +1,13 @@
+{
+  "sources": {
+    "shop_a": {"delimiter": ",", "escape": "doubling", "nulls": ["", "NULL"], "encoding": "utf-8-sig"},
+    "shop_b": {"delimiter": ",", "escape": "doubling", "nulls": [""], "encoding": "utf-8"},
+    "shop_c": {"delimiter": ";", "escape": "backslash", "nulls": ["", "NULL", "\\N"], "encoding": "utf-8"}
+  },
+  "columns": {
+    "order_id": {"type": "text", "aliases": ["order_id", "订单号"], "primary": "shop_a"},
+    "price": {"type": "money", "aliases": ["price", "成交价"], "primary": "shop_a"},
+    "tax_rate": {"type": "rate", "aliases": ["tax_rate", "税率"], "primary": "shop_a"},
+    "remark": {"type": "text", "aliases": ["remark", "notes", "备注"], "primary": "shop_a"}
+  }
+}

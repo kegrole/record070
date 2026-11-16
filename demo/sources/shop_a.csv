@@ -1,0 +1,6 @@
+﻿order_id,price,tax_rate,remark
+A1,"1,234.50",0.08,ok
+B1,120.00,0.08,keep
+C1,50.00,0.08,ok
+D1,70.00,0.08,ok
+F1,N/A,0.08,NULL

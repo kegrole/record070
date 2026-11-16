@@ -1,0 +1,6 @@
+﻿order_id,price,tax_rate,remark,notes
+A1,"1,234.50",8%,ok,note-a
+B1,125.00,0.08,keep,note-b
+C1,50.00,0.08,ok,note-c
+D1,70.00,0.08,,note-d
+F1,50.00,0.08,ok,note-f

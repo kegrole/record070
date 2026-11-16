@@ -1,0 +1,143 @@
+{
+  "rows": [
+    {
+      "order_id": "A1",
+      "price": "1234.50",
+      "tax_rate": "0.08",
+      "remark": "ok",
+      "sources": [
+        "shop_a",
+        "shop_b",
+        "shop_c"
+      ]
+    },
+    {
+      "order_id": "B1",
+      "price": "120.00",
+      "tax_rate": "0.08",
+      "remark": "keep",
+      "sources": [
+        "shop_a",
+        "shop_b"
+      ]
+    },
+    {
+      "order_id": "C1",
+      "price": "50.00",
+      "tax_rate": "0.08",
+      "remark": "ok",
+      "sources": [
+        "shop_a",
+        "shop_b",
+        "shop_c"
+      ]
+    },
+    {
+      "order_id": "D1",
+      "price": "70.00",
+      "tax_rate": "0.08",
+      "remark": "ok",
+      "sources": [
+        "shop_a",
+        "shop_b",
+        "shop_c"
+      ]
+    },
+    {
+      "order_id": "E1",
+      "price": "42.00",
+      "tax_rate": "0.08",
+      "remark": "say \"hi\"",
+      "sources": [
+        "shop_c"
+      ]
+    },
+    {
+      "order_id": "F1",
+      "price": "50.00",
+      "tax_rate": "0.08",
+      "remark": null,
+      "sources": [
+        "shop_a",
+        "shop_b"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "order_id": "A1",
+      "column": "tax_rate",
+      "kept_value": "0.08",
+      "kept_source": "shop_a",
+      "dropped_value": "0.085",
+      "dropped_source": "shop_c"
+    },
+    {
+      "order_id": "B1",
+      "column": "price",
+      "kept_value": "120.00",
+      "kept_source": "shop_a",
+      "dropped_value": "125.00",
+      "dropped_source": "shop_b"
+    }
+  ],
+  "type_errors": [
+    {
+      "source": "shop_a",
+      "order_id": "F1",
+      "column": "price",
+      "raw": "N/A"
+    }
+  ],
+  "alias_conflicts": [
+    {
+      "source": "shop_b",
+      "column": "remark",
+      "header": "notes"
+    }
+  ],
+  "summary": {
+    "rows": 6,
+    "conflicts": 2,
+    "type_errors": 1,
+    "alias_conflicts": 1,
+    "sources": 3
+  },
+  "aliases_used": [
+    {
+      "unified": "order_id",
+      "primary": "shop_a",
+      "matched_sources": [
+        "shop_a",
+        "shop_b",
+        "shop_c"
+      ]
+    },
+    {
+      "unified": "price",
+      "primary": "shop_a",
+      "matched_sources": [
+        "shop_a",
+        "shop_b",
+        "shop_c"
+      ]
+    },
+    {
+      "unified": "remark",
+      "primary": "shop_a",
+      "matched_sources": [
+        "shop_a",
+        "shop_c"
+      ]
+    },
+    {
+      "unified": "tax_rate",
+      "primary": "shop_a",
+      "matched_sources": [
+        "shop_a",
+        "shop_b",
+        "shop_c"
+      ]
+    }
+  ]
+}
